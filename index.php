@@ -18,11 +18,11 @@
         <div class="row text-center d-flex justify-content-center">
             <h1>Password Generator</h1>
             <div class="col-6 pt-5">
-                <form>
+                <form method="get" action="functions.php">
                     <div class="mb-3">
                         <label for="customRange1" class="form-label">Scegli il numero di caratteri per la tua password:</label>
-                        <input type="range" class="form-range" id="customRange1" min="5" max="15" step="1">
-                        <span id="charCount">10</span> <!-- Mostra il valore selezionato qui -->
+                        <input type="range" class="form-range" name="charCount" id="customRange1" min="5" max="15" step="1">
+                        <span id="charCount">10</span>
                     </div>
                     <button type="submit" class="btn btn-primary">Genera</button>
                 </form>
@@ -31,7 +31,6 @@
     </div>
 
     <script>
-        // Aggiungi questo script per aggiornare il valore visualizzato
         const rangeInput = document.getElementById("customRange1");
         const charCountSpan = document.getElementById("charCount");
 
